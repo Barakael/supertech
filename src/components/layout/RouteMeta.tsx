@@ -13,14 +13,14 @@ const routeMeta: Record<string, { title: string; description: string }> = {
       'Learn about SuperTech history, mission, vision and client portfolio.',
   },
   '/services': {
-    title: 'SuperTech Limited | Services',
+    title: 'SuperTech Limited | Services and Projects',
     description:
-      'Explore SuperTech electrical, telecom and equipment supply services.',
+      'Explore SuperTech integrated services and project portfolio across electrical, ICT and telecommunications delivery.',
   },
   '/projects': {
-    title: 'SuperTech Limited | Projects',
+    title: 'SuperTech Limited | Services and Projects',
     description:
-      'See project categories and delivery focus from SuperTech Limited.',
+      'Projects are now included in the Services page with combined delivery highlights and references.',
   },
   '/contact': {
     title: 'SuperTech Limited | Contact',
