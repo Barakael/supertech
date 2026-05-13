@@ -1,61 +1,117 @@
 import { Link } from 'react-router-dom'
 import { HeroSlider } from '../components/sections/HeroSlider'
 import { PartnersStrip } from '../components/sections/PartnersStrip'
+import { SmartImage } from '../components/sections/SmartImage'
 import { siteContent } from '../content/siteContent'
 
 export function HomePage() {
+  const aboutFeatures = [
+    {
+      title: 'What we do',
+      body: siteContent.aboutSummary[2],
+    },
+    {
+      title: 'Why choose us',
+      body: siteContent.whoWeAre,
+    },
+  ]
+
+  const aboutHighlights = siteContent.kpis.slice(0, 3)
+
   return (
     <>
       <HeroSlider />
 
-      <section className="section">
-        <div className="container kpi-grid">
-          {siteContent.kpis.map((item) => (
-            <article key={item.label} className="kpi-card">
-              <p className="kpi-value">{item.value}</p>
-              <p className="kpi-label">{item.label}</p>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <section className="section section-alt">
-        <div className="container grid-three">
-          <article className="card premium-card">
-            <p className="card-kicker">Company Profile</p>
-            <h2>Who We Are</h2>
-            <p>{siteContent.whoWeAre}</p>
-            <Link to="/about" className="inline-link">
-              Read full story
-            </Link>
-          </article>
-          <article className="card premium-card">
-            <p className="card-kicker">Our Value</p>
-            <h2>What We Deliver</h2>
-            <ul className="list">
-              {siteContent.whatWeDo.slice(0, 6).map((item) => (
-                <li key={item}>{item}</li>
+        <div className="container home-services-shell">
+          <div className="home-services-head">
+            <p className="eyebrow">Core Services</p>
+            <h2 className="section-title">Four specialized solutions for dependable delivery</h2>
+            <p className="lead">
+              From power systems and telecom infrastructure to ICT and equipment supply, our
+              teams deliver practical engineering outcomes for critical operations.
+            </p>
+          </div>
+          <div className="home-services-grid">
+            {siteContent.services.map((service) => (
+              <article key={service.title} className="card premium-card home-service-card">
+                <div className="home-service-image-wrap">
+                  <SmartImage src={service.image} alt={service.title} className="home-service-image" />
+                </div>
+                <p className="card-kicker">Service Area</p>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                {/* <ul className="list home-service-list">
+                  {service.bullets.slice(0, 3).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul> */}
+                <Link to="/services" className="inline-link home-service-link">
+                  Explore service
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section home-about-unique">
+        <div className="container home-about-unique-grid">
+          <article className="home-about-pane home-about-copy-pane">
+            <p className="eyebrow">Who We Are</p>
+            <h2 className="section-title">A trusted partner for technology solutions and services.</h2>
+            <p className="lead">{siteContent.aboutSummary[0]}</p>
+            <div className="home-about-feature-list">
+              {aboutFeatures.map((item) => (
+                <article key={item.title} className="home-about-feature-item">
+                  <p className="home-about-feature-title">{item.title}</p>
+                  <p>{item.body}</p>
+                </article>
               ))}
-            </ul>
-            <Link to="/services" className="inline-link">
-              Explore service lines
-            </Link>
+            </div>
+            <div className="button-row home-about-actions">
+              <Link to="/about" className="button button-primary">
+                Learn More
+              </Link>
+              <Link to="/contact" className="button button-secondary home-about-contact-link">
+                Start Project
+              </Link>
+            </div>
           </article>
-          <article className="card premium-card accent-card">
-            <p className="card-kicker">Partner Trust</p>
-            <h2>Our Clients</h2>
-            <ul className="list light-list">
-              {siteContent.clients.slice(0, 5).map((client) => (
-                <li key={client}>{client}</li>
+
+          <article className="home-about-pane home-about-visual-pane">
+            <p className="home-about-pill">Digital Operations</p>
+            <h3>Operate faster with structured, technology-led delivery.</h3>
+            <p className="home-about-visual-copy">
+              We help teams move from manual workflows to practical systems that improve visibility,
+              coordination and service outcomes.
+            </p>
+            <div className="home-about-benefits-block">
+              <p className="home-about-benefits-title">What this gives your business</p>
+              <ul className="home-about-checklist">
+                <li>Streamlined operations across teams and sites</li>
+                <li>Access to information anywhere, anytime</li>
+                <li>Faster response and more dependable service</li>
+                <li>Future-ready systems aligned to your growth</li>
+              </ul>
+            </div>
+            <div className="home-about-metric-grid">
+              {aboutHighlights.map((item) => (
+                <article key={item.label} className="home-about-metric-card">
+                  <p className="home-about-metric-value">{item.value}</p>
+                  <p className="home-about-metric-label">{item.label}</p>
+                </article>
               ))}
-            </ul>
-            <Link to="/about" className="inline-link light-link">
-              View full client list
-            </Link>
+            </div>
+            <p className="home-about-motto-line">{siteContent.motto}</p>
           </article>
         </div>
       </section>
 
+
+    
+   
       <section className="section">
         <div className="container statement-banner">
           <div>
@@ -71,7 +127,7 @@ export function HomePage() {
           </Link>
         </div>
       </section>
-
+      
       <PartnersStrip />
     </>
   )
