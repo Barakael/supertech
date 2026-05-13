@@ -1,6 +1,7 @@
 import blueCables from '../assets/Blue-cables.jpg'
 import botLogo from '../assets/BOT.png'
 import crdbLogo from '../assets/crdb.png'
+import ethernetImage from '../assets/ethernet.jpg'
 import nbcLogo from '../assets/NBC.png'
 import nmbLogoNew from '../assets/NMB.jpeg'
 import powerSupply from '../assets/power-supply.jpg'
@@ -164,36 +165,56 @@ export const siteContent = {
       client: 'NBC Bank Tandahimba Branch',
       summary:
         'Designed and installed structured network cabling for branch connectivity and reliable data operations.',
+      image: ethernetImage,
     },
     {
       title: 'SCADA Gateway Supply for Substation Automation',
       client: 'TANESCO (Dege Beach, Ilala and Masaki Substations)',
       summary:
         'Supplied SCADA gateway equipment for integration of substations into automation and control systems.',
+      image: powerSupply,
     },
     {
       title: 'Barrier Gate Installation',
       client: 'NSSF - Nyerere Bridge',
       summary:
         'Implemented barrier gate systems to support controlled and secure access operations.',
+      image: telecommunications,
     },
     {
       title: 'AFIS Biometric Equipment and Card Printer Support',
       client: 'Tanzania Revenue Authority',
       summary:
         'Provided maintenance, repair and equipment supply for biometric and card printer operations.',
+      image: blueCables,
     },
     {
       title: 'Fiber Optic Link and Ring Network Deployments',
       client: 'NMB and TANESCO HQ',
       summary:
         'Delivered fiber links and ring connectivity between HQ buildings, substations and key network nodes.',
+      image: ethernetImage,
     },
     {
       title: 'Airmax and Grid Control Integration Equipment',
       client: 'Zantel and TANESCO',
       summary:
         'Supplied and integrated equipment for B2B telecom connectivity and grid control communication.',
+      image: telecommunications,
+    },
+    {
+      title: 'Enterprise CCTV and Access Control Rollout',
+      client: 'Regional Public Institution Campus',
+      summary:
+        'Delivered CCTV surveillance and access control integration for secure, centralized facility operations.',
+      image: blueCables,
+    },
+    {
+      title: 'Hybrid Solar and Backup Power Upgrade',
+      client: 'Private Industrial Operations Site',
+      summary:
+        'Installed solar, inverter and backup power components to improve uptime and power resilience.',
+      image: powerSupply,
     },
   ],
   partners: [
