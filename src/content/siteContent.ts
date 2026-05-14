@@ -8,6 +8,8 @@ import powerSupply from '../assets/power-supply.jpg'
 import trcLogo from '../assets/TRC.jpeg'
 import telecommunications from '../assets/telecommuications.jpg'
 import twigaLogo from '../assets/Twiga.png'
+import telecom1 from '../assets/telecomTower.jpg'
+import electricalImage from '../assets/electric.jpg'
 
 export const siteContent = {
   companyName: 'SuperTech Limited',
@@ -115,7 +117,7 @@ export const siteContent = {
         'Solar energy equipment supply',
         'Electrical equipment and accessories',
       ],
-      image: blueCables,
+      image: electricalImage,
     },
   ],
   productsSupplied: [
@@ -141,7 +143,7 @@ export const siteContent = {
     {
       title: 'Telecommunication Systems',
       subtitle: 'Scalable voice and data connectivity for modern teams.',
-      image: telecommunications,
+      image: telecom1,
     },
     {
       title: 'ICT and Equipment Supply',
@@ -150,7 +152,7 @@ export const siteContent = {
     },
   ],
   kpis: [
-    { value: '19+', label: 'Years of delivery' },
+    { value: '20+', label: 'Years of delivery' },
     { value: '200+', label: 'Projects and assignments delivered' },
     { value: '40+', label: 'Institutional and enterprise clients' },
   ],
