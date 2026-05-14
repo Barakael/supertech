@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { HeroSlider } from '../components/sections/HeroSlider'
 import { PartnersStrip } from '../components/sections/PartnersStrip'
+import { ProjectsShowcaseSlider } from '../components/sections/ProjectsShowcaseSlider'
 import { SmartImage } from '../components/sections/SmartImage'
 import { siteContent } from '../content/siteContent'
 
@@ -108,6 +109,8 @@ export function HomePage() {
           </article>
         </div>
       </section>
+
+      <ProjectsShowcaseSlider />
 
 
     
