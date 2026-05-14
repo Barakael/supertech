@@ -18,6 +18,10 @@ export function HeroSlider() {
   }, [slides.length])
 
   const activeSlide = slides[activeIndex]
+  const imageClassName =
+    activeSlide.title === 'Telecommunication Systems'
+      ? 'hero-image hero-image-crop-bottom'
+      : 'hero-image'
 
   const moveToPrevious = () => {
     setActiveIndex((prev) => (prev - 1 + slides.length) % slides.length)
@@ -82,7 +86,7 @@ export function HeroSlider() {
           <SmartImage
             src={activeSlide.image}
             alt={activeSlide.title}
-            className="hero-image"
+            className={imageClassName}
             loading="eager"
             fetchPriority="high"
           />
