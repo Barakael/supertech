@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://supertechltd.co.tz/sitemap.xml
