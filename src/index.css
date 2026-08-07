@@ -1130,7 +1130,7 @@ h2 {
   height: 86px;
   border-radius: 0.6rem;
   object-fit: contain;
-  background: #f8fafc;
+  background: var(--white);
   padding: 0.25rem;
 }
 
