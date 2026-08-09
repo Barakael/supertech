@@ -70,12 +70,12 @@ export function SeoManager() {
     upsertMeta('property', 'og:title', seo.title)
     upsertMeta('property', 'og:description', seo.description)
     upsertMeta('property', 'og:url', canonicalUrl)
-    upsertMeta('property', 'og:image', `${SITE_URL}/favicon.svg`)
+    upsertMeta('property', 'og:image', `${SITE_URL}/favicon.jpg`)
 
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('name', 'twitter:title', seo.title)
     upsertMeta('name', 'twitter:description', seo.description)
-    upsertMeta('name', 'twitter:image', `${SITE_URL}/favicon.svg`)
+    upsertMeta('name', 'twitter:image', `${SITE_URL}/favicon.jpg`)
   }, [pathname])
 
   return null
